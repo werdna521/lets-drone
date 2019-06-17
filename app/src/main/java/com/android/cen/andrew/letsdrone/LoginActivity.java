@@ -12,6 +12,7 @@ import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
 
 public class LoginActivity extends AppCompatActivity {
+    private static final String PREF_ACC = "acccounts";
     private static final String PREF_LOGIN = "login";
     private TextInputLayout mUsernameInputLayout;
     private TextInputLayout mPasswordInputLayout;
@@ -20,6 +21,7 @@ public class LoginActivity extends AppCompatActivity {
     private MaterialButton mLoginButton;
     private MaterialButton mRegisterButton;
     private SharedPreferences mLoginPrefs;
+    private SharedPreferences mAccounts;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,13 +36,13 @@ public class LoginActivity extends AppCompatActivity {
         mLoginButton = findViewById(R.id.login_button);
         mRegisterButton = findViewById(R.id.register_button);
         mLoginPrefs = getSharedPreferences(PREF_LOGIN, MODE_PRIVATE);
+        mAccounts = getSharedPreferences(PREF_ACC, MODE_PRIVATE);
 
         if (mLoginPrefs.getBoolean("doneLogin", false)) {
             Intent intent = new Intent(LoginActivity.this, MainActivity.class);
             startActivity(intent);
         }
 
-        // TODO logout
         // login button listener
         mLoginButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -58,7 +60,8 @@ public class LoginActivity extends AppCompatActivity {
         mRegisterButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);
+                startActivity(intent);
             }
         });
     }
@@ -70,7 +73,7 @@ public class LoginActivity extends AppCompatActivity {
         mUsernameInputLayout.setError("");
         mPasswordInputLayout.setError("");
 
-        if (username.equals("letsdrone") && password.equals("letsdrone")) {
+        if (mAccounts.getString(username, "nodata").equals(password)) {
             return true;
         }
 

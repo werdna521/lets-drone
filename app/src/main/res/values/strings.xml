@@ -16,4 +16,7 @@
     <string name="help_center">Help Center</string>
     <string name="emergency_contacts">Emergency Contacts</string>
     <string name="logout">Logout</string>
+    <string name="logo_random"><![CDATA[<]]></string>
+    <string name="full_name">Full Name</string>
+    <string name="register_button">Register</string>
 </resources>

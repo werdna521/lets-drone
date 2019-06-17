@@ -13,6 +13,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity implements ProfileFragment.Callbacks {
     private static final String PREF_LOGIN = "login";
+    private static final String PREF_REGISTERED_ACCOUNTS = "accounts";
     private BottomNavigationView mBottomNavigationView;
 
     @Override
@@ -41,6 +42,8 @@ public class MainActivity extends AppCompatActivity implements ProfileFragment.C
                     fragment =  new HomeFragment();
                 } else if (item.getItemId() == R.id.history_menu) {
                     fragment = new HistoryFragment();
+                } else if (item.getItemId() == R.id.inbox_menu) {
+                    fragment = new Fragment(); // TODO
                 } else if (item.getItemId() == R.id.profile_menu) {
                     fragment = new ProfileFragment();
                 }
