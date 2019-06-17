@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar_inbox"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@android:color/white"
+            app:titleTextAppearance="@style/TextAppearance.MaterialComponents.Headline5"
+            app:title="Inbox"/>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_margin="16dp"
+                app:contentPadding="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardElevation="4dp"
+                android:clickable="true"
+                android:focusable="true">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_margin="8dp"
+                        android:id="@+id/logo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/message"/>
+
+                    <TextView
+                        android:layout_marginBottom="2dp"
+                        android:id="@+id/title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
+                        android:layout_toEndOf="@+id/logo"
+                        android:textStyle="bold"
+                        android:text="Top up via BCA"/>
+
+                    <TextView
+                        android:id="@+id/msg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@+id/logo"
+                        android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2"
+                        android:layout_below="@id/title"
+                        android:text="Anda baru saja melakukan top u..."/>
+                </RelativeLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_margin="16dp"
+                app:contentPadding="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardElevation="4dp"
+                android:clickable="true"
+                android:focusable="true">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_margin="8dp"
+                        android:id="@+id/logo1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/message"/>
+
+                    <TextView
+                        android:layout_marginBottom="2dp"
+                        android:id="@+id/title1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
+                        android:layout_toEndOf="@+id/logo1"
+                        android:textStyle="bold"
+                        android:text="Top up via ATM BCA"/>
+
+                    <TextView
+                        android:id="@+id/msg1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@+id/logo1"
+                        android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2"
+                        android:layout_below="@id/title1"
+                        android:text="Anda baru saja melakukan top u..."/>
+                </RelativeLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_margin="16dp"
+                app:contentPadding="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardElevation="4dp"
+                android:clickable="true"
+                android:focusable="true">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_margin="8dp"
+                        android:id="@+id/logo2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/message"/>
+
+                    <TextView
+                        android:layout_marginBottom="2dp"
+                        android:id="@+id/title2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
+                        android:layout_toEndOf="@+id/logo2"
+                        android:textStyle="bold"
+                        android:text="Lagi cari promo Let's Drone?"/>
+
+                    <TextView
+                        android:id="@+id/msg2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@+id/logo2"
+                        android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2"
+                        android:layout_below="@id/title2"
+                        android:text="Buruan kirim barang menggunakan k..."/>
+                </RelativeLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_margin="16dp"
+                app:contentPadding="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardElevation="4dp"
+                android:clickable="true"
+                android:focusable="true">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_margin="8dp"
+                        android:id="@+id/logo3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/message"/>
+
+                    <TextView
+                        android:layout_marginBottom="2dp"
+                        android:id="@+id/title3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
+                        android:layout_toEndOf="@+id/logo3"
+                        android:textStyle="bold"
+                        android:text="Ngirim barang tapi takut lambat?"/>
+
+                    <TextView
+                        android:id="@+id/msg3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@+id/logo3"
+                        android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2"
+                        android:layout_below="@id/title3"
+                        android:text="Let's Drone sekarang menawarkan fit..."/>
+                </RelativeLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_margin="16dp"
+                app:contentPadding="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardElevation="4dp"
+                android:clickable="true"
+                android:focusable="true">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_margin="8dp"
+                        android:id="@+id/logo4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/message"/>
+
+                    <TextView
+                        android:layout_marginBottom="2dp"
+                        android:id="@+id/title4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
+                        android:layout_toEndOf="@+id/logo4"
+                        android:textStyle="bold"
+                        android:text="Selamat Hari Raya Idul Fitri"/>
+
+                    <TextView
+                        android:id="@+id/msg4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@+id/logo4"
+                        android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2"
+                        android:layout_below="@id/title4"
+                        android:text="Di hari raya ini, daripada bingung..."/>
+                </RelativeLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_margin="16dp"
+                app:contentPadding="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardElevation="4dp"
+                android:clickable="true"
+                android:focusable="true">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_margin="8dp"
+                        android:id="@+id/logo5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/message"/>
+
+                    <TextView
+                        android:layout_marginBottom="2dp"
+                        android:id="@+id/title5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
+                        android:layout_toEndOf="@+id/logo5"
+                        android:textStyle="bold"
+                        android:text="Promo hot 50"/>
+
+                    <TextView
+                        android:id="@+id/msg5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@+id/logo5"
+                        android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2"
+                        android:layout_below="@id/title5"
+                        android:text="Mau pakai jasa Let's Drone tapi taku..."/>
+                </RelativeLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_margin="16dp"
+                app:contentPadding="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardElevation="4dp"
+                android:clickable="true"
+                android:focusable="true">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_margin="8dp"
+                        android:id="@+id/logo6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/message"/>
+
+                    <TextView
+                        android:layout_marginBottom="2dp"
+                        android:id="@+id/title6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
+                        android:layout_toEndOf="@+id/logo6"
+                        android:textStyle="bold"
+                        android:text="Mari berpantun"/>
+
+                    <TextView
+                        android:id="@+id/msg6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@+id/logo6"
+                        android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2"
+                        android:layout_below="@id/title6"
+                        android:text="Jalan-jalan ke kota Surabaya, lupa m..."/>
+                </RelativeLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_margin="16dp"
+                app:contentPadding="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardElevation="4dp"
+                android:clickable="true"
+                android:focusable="true">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_margin="8dp"
+                        android:id="@+id/logo7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/message"/>
+
+                    <TextView
+                        android:layout_marginBottom="2dp"
+                        android:id="@+id/title7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
+                        android:layout_toEndOf="@+id/logo7"
+                        android:textStyle="bold"
+                        android:text="Selamat datang di Let's Drone"/>
+
+                    <TextView
+                        android:id="@+id/msg7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@+id/logo7"
+                        android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2"
+                        android:layout_below="@id/title7"
+                        android:text="Halooo! Selamat datang di Let's Drone,..."/>
+                </RelativeLayout>
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

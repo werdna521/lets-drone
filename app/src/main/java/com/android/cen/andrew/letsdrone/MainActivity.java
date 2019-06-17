@@ -67,7 +67,7 @@ public class MainActivity extends AppCompatActivity implements ProfileFragment.C
                 } else if (item.getItemId() == R.id.history_menu) {
                     fragment = new HistoryFragment();
                 } else if (item.getItemId() == R.id.inbox_menu) {
-                    fragment = new Fragment(); // TODO
+                    fragment = new InboxFragment();
                 } else if (item.getItemId() == R.id.profile_menu) {
                     fragment = new ProfileFragment();
                 }
