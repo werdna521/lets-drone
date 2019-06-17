@@ -352,7 +352,7 @@
                         android:layout_toEndOf="@+id/logo7"
                         android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2"
                         android:layout_below="@id/title7"
-                        android:text="Halooo! Selamat datang di Let's Drone,..."/>
+                        android:text="Halooo! Selamat datang di Let's Dro..."/>
                 </RelativeLayout>
             </com.google.android.material.card.MaterialCardView>
         </LinearLayout>
