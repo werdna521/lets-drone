@@ -7,6 +7,7 @@ import android.view.View;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.textfield.TextInputEditText;
@@ -24,6 +25,7 @@ public class RegisterActivity extends AppCompatActivity {
     private TextInputEditText mPasswordRepeatEditText;
     private MaterialButton mRegisterButton;
     private SharedPreferences mAccounts;
+    private Toolbar mToolbar;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -41,6 +43,17 @@ public class RegisterActivity extends AppCompatActivity {
         mPasswordRepeatEditText = findViewById(R.id.password_repeat_edit_text);
         mRegisterButton = findViewById(R.id.register_button);
         mAccounts = getSharedPreferences(PREF_ACC, MODE_PRIVATE);
+        mToolbar = findViewById(R.id.toolbar);
+
+        mToolbar.setTitle("");
+        setSupportActionBar(mToolbar);
+        mToolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);
+                startActivity(intent);
+            }
+        });
 
         mRegisterButton.setOnClickListener(new View.OnClickListener() {
             @Override
