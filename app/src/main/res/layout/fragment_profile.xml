@@ -20,14 +20,22 @@
             android:scaleType="centerCrop"/>
 
         <TextView
+            android:id="@+id/fullname"
             android:layout_marginTop="16dp"
-            android:layout_marginBottom="16dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/textColor"
             android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
-            android:typeface="monospace"
-            android:text="Dragon Warrior"/>
+            android:typeface="monospace"/>
+
+        <TextView
+            android:id="@+id/username"
+            android:layout_marginBottom="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/textColor"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
+            android:typeface="monospace"/>
     </LinearLayout>
 
     <com.google.android.material.card.MaterialCardView

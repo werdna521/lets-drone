@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -13,8 +14,18 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity implements ProfileFragment.Callbacks {
     private static final String PREF_LOGIN = "login";
-    private static final String PREF_REGISTERED_ACCOUNTS = "accounts";
+    private static final String EXTRA_NAME = "nameeeee";
+    private static final String EXTRA_USERNAME = "usernameeeee";
     private BottomNavigationView mBottomNavigationView;
+    private String mName;
+    private String mUsername;
+
+    public static Intent newIntent(Context context, String name, String username) {
+        Intent intent = new Intent(context, MainActivity.class);
+        intent.putExtra(EXTRA_NAME, name);
+        intent.putExtra(EXTRA_USERNAME, username);
+        return intent;
+    }
 
     @Override
     public void onLogoutClicked() {
@@ -27,9 +38,22 @@ public class MainActivity extends AppCompatActivity implements ProfileFragment.C
     }
 
     @Override
+    public String getName() {
+        return mName;
+    }
+
+    @Override
+    public String getUsername() {
+        return  mUsername;
+    }
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        mName = getIntent().getStringExtra(EXTRA_NAME);
+        mUsername = getIntent().getStringExtra(EXTRA_USERNAME);
 
         getSupportFragmentManager().beginTransaction().replace(R.id.container, new HomeFragment()).commit();
 

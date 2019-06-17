@@ -39,7 +39,10 @@ public class LoginActivity extends AppCompatActivity {
         mAccounts = getSharedPreferences(PREF_ACC, MODE_PRIVATE);
 
         if (mLoginPrefs.getBoolean("doneLogin", false)) {
-            Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+            String lastUsername = mAccounts.getString("last", "nodata");
+            Intent intent = MainActivity.newIntent(this,
+                    mAccounts.getString(lastUsername + " fullname", "nodata"),
+                    lastUsername);
             startActivity(intent);
         }
 
@@ -51,7 +54,12 @@ public class LoginActivity extends AppCompatActivity {
                     SharedPreferences.Editor editor = mLoginPrefs.edit();
                     editor.putBoolean("doneLogin", true);
                     editor.apply();
-                    Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                    SharedPreferences.Editor editorr = mAccounts.edit();
+                    editorr.putString("last", mUsernameEditText.getText().toString());
+                    editorr.apply();
+                    Intent intent = MainActivity.newIntent(LoginActivity.this,
+                            mAccounts.getString(mUsernameEditText.getText().toString() + " fullname", "nodata"),
+                            mUsernameEditText.getText().toString());
                     startActivity(intent);
                 }
             }

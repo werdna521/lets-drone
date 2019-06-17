@@ -1,10 +1,12 @@
 package com.android.cen.andrew.letsdrone;
 
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -15,9 +17,13 @@ import com.google.android.material.card.MaterialCardView;
 public class ProfileFragment extends Fragment {
     private MaterialCardView mLogout;
     private Callbacks mCallbacks;
+    private TextView mFullname;
+    private TextView mUsername;
 
     public interface Callbacks {
         public void onLogoutClicked();
+        public String getName();
+        public String getUsername();
     }
 
     @Override
@@ -44,6 +50,13 @@ public class ProfileFragment extends Fragment {
                 mCallbacks.onLogoutClicked();
             }
         });
+
+        mFullname = view.findViewById(R.id.fullname);
+        mFullname.setText(mCallbacks.getName());
+
+        String username = "(" + mCallbacks.getUsername() + ")";
+        mUsername = view.findViewById(R.id.username);
+        mUsername.setText(username);
 
         return view;
     }
