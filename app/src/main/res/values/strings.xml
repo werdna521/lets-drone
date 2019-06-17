@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Let\'s Drone</string>
+    <string name="login_button">Login</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="error">Wrong credentials</string>
+    <string name="home">Home</string>
+    <string name="history">History</string>
+    <string name="profile">Account</string>
+    <string name="balance">Balance</string>
+    <string name="money">Rp 100.000</string>
+    <string name="register_now">Register now</string>
+    <string name="inbox">Inbox</string>
+    <string name="settings">Settings</string>
+    <string name="logo_something"><![CDATA[>]]></string>
+    <string name="help_center">Help Center</string>
+    <string name="emergency_contacts">Emergency Contacts</string>
+    <string name="logout">Logout</string>
+</resources>

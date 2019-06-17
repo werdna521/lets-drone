@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#c6ff00</color>
+    <color name="colorPrimaryDark">@color/green</color>
+    <color name="colorPrimaryLight">#fdff58</color>
+    <color name="colorKepencet">@color/colorPrimaryDark</color>
+    <color name="meiandao">#bdbdbd</color>
+    <color name="cardColor">#fafafa</color>
+    <color name="green">#00c853</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="textColor">#321911</color>
+</resources>
