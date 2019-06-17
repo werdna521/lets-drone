@@ -33,6 +33,7 @@
                     android:layout_height="wrap_content"
                     android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
                     android:text="@string/balance"
+                    android:textStyle="bold"
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentStart="true"
                     android:layout_toLeftOf="@+id/button_topup"
@@ -48,6 +49,7 @@
                     android:layout_toLeftOf="@id/button_topup"
                     android:layout_toStartOf="@id/button_topup"
                     android:layout_below="@id/balance"
+                    android:textColor="#fbc02d"
                     android:text="@string/money"/>
 
             <com.google.android.material.button.MaterialButton
@@ -63,7 +65,7 @@
     </com.google.android.material.card.MaterialCardView>
     
     <LinearLayout
-        android:layout_marginTop="160dp"
+        android:layout_marginTop="170dp"
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
         android:layout_gravity="center_horizontal"
@@ -72,9 +74,10 @@
         android:orientation="horizontal">
 
         <com.google.android.material.card.MaterialCardView
-            android:layout_margin="16dp"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            app:cardElevation="4dp"
+            android:layout_margin="8dp"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
             android:layout_weight="1"
             android:focusable="true"
             android:clickable="true">
@@ -100,9 +103,10 @@
         </com.google.android.material.card.MaterialCardView>
 
         <com.google.android.material.card.MaterialCardView
-            android:layout_margin="16dp"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            app:cardElevation="4dp"
+            android:layout_margin="8dp"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
             android:layout_weight="1"
             android:focusable="true"
             android:clickable="true">
@@ -128,9 +132,10 @@
         </com.google.android.material.card.MaterialCardView>
 
         <com.google.android.material.card.MaterialCardView
-            android:layout_margin="16dp"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            app:cardElevation="4dp"
+            android:layout_margin="8dp"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
             android:layout_weight="1"
             android:focusable="true"
             android:clickable="true">
@@ -154,5 +159,40 @@
                     android:text="Info"/>
             </LinearLayout>
         </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            app:cardElevation="4dp"
+            android:layout_margin="8dp"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:focusable="true"
+            android:clickable="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/point_icon"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2"
+                    android:textColor="@color/green"
+                    android:text="D-Poin"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
     </LinearLayout>
+
+    <View
+        android:layout_marginTop="260dp"
+        android:layout_width="match_parent"
+        android:layout_height="8dp"
+        android:background="#eeeeee"/>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
