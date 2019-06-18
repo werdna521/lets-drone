@@ -179,7 +179,7 @@
                         android:layout_height="wrap_content"
                         android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
                         android:textStyle="bold"
-                        android:text="12 January 2019"/>
+                        android:text="10 January 2019"/>
 
                     <View
                         android:layout_width="match_parent"

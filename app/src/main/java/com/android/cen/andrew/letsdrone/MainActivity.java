@@ -12,7 +12,7 @@ import android.view.MenuItem;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-public class MainActivity extends AppCompatActivity implements ProfileFragment.Callbacks {
+public class MainActivity extends AppCompatActivity implements ProfileFragment.Callbacks, HomeFragment.Callbacks {
     private static final String PREF_LOGIN = "login";
     private static final String EXTRA_NAME = "nameeeee";
     private static final String EXTRA_USERNAME = "usernameeeee";
@@ -25,6 +25,12 @@ public class MainActivity extends AppCompatActivity implements ProfileFragment.C
         intent.putExtra(EXTRA_NAME, name);
         intent.putExtra(EXTRA_USERNAME, username);
         return intent;
+    }
+
+    @Override
+    public void start(Class cls) {
+        Intent intent = new Intent(this, cls);
+        startActivity(intent);
     }
 
     @Override
