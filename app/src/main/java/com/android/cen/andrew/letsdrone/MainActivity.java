@@ -1,6 +1,7 @@
 package com.android.cen.andrew.letsdrone;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
@@ -16,6 +17,7 @@ public class MainActivity extends AppCompatActivity implements ProfileFragment.C
     private static final String PREF_LOGIN = "login";
     private static final String EXTRA_NAME = "nameeeee";
     private static final String EXTRA_USERNAME = "usernameeeee";
+    private static final int REQUEST = 101;
     private BottomNavigationView mBottomNavigationView;
     private String mName;
     private String mUsername;
@@ -28,9 +30,20 @@ public class MainActivity extends AppCompatActivity implements ProfileFragment.C
     }
 
     @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == REQUEST) {
+            if (resultCode == RESULT_OK) {
+                Intent intent = new Intent(this, TrackingActivity.class);
+                startActivity(intent);
+            }
+        }
+    }
+
+    @Override
     public void start(Class cls) {
         Intent intent = new Intent(this, cls);
-        startActivity(intent);
+        startActivityForResult(intent, REQUEST);
     }
 
     @Override

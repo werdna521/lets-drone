@@ -102,7 +102,7 @@
         style="@style/Widget.MaterialComponents.Button.OutlinedButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Let's Express (Jabodetabek 20k)"
+        android:text="Let's Express (Rp20.000 / kg)"
         app:strokeColor="@color/colorPrimaryDark"
         android:textColor="@color/colorPrimaryDark"/>
 
@@ -111,7 +111,7 @@
         style="@style/Widget.MaterialComponents.Button.OutlinedButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Let's regular (Jabodetabek 13k)"
+        android:text="Let's regular (Rp13.000 / kg)"
         app:strokeColor="@color/colorPrimaryDark"
         android:textColor="@color/colorPrimaryDark"/>
 
@@ -120,5 +120,5 @@
         android:layout_height="wrap_content"
         android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2"
         android:textStyle="italic"
-        android:text="Di luar Jabodetabek harga dihitung per km"/>
+        android:text="Maksimal 20 km"/>
 </LinearLayout>

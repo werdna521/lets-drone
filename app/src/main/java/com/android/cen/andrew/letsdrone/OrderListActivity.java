@@ -24,8 +24,8 @@ public class OrderListActivity extends AppCompatActivity {
         super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == REQUEST_EXIT) {
             if (resultCode == RESULT_OK) {
-                this.finish();
-
+                setResult(RESULT_OK, null);
+                finish();
             }
         }
     }
@@ -46,7 +46,7 @@ public class OrderListActivity extends AppCompatActivity {
         express.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = OrderActivity.newIntent(from.getText().toString(), to.getText().toString(), "Let\'s express", OrderListActivity.this);
+                Intent intent = OrderActivity.newIntent(from.getText().toString(), to.getText().toString(), "Let\'s express", desc.getText().toString(), type.getText().toString(), Integer.parseInt(weight.getText().toString()), OrderListActivity.this);
                 startActivityForResult(intent, REQUEST_EXIT);
             }
         });
@@ -54,8 +54,8 @@ public class OrderListActivity extends AppCompatActivity {
         regular.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = OrderActivity.newIntent(from.getText().toString(), to.getText().toString(), "Let\'s regular", OrderListActivity.this);
-                startActivity(intent);
+                Intent intent = OrderActivity.newIntent(from.getText().toString(), to.getText().toString(), "Let\'s regular", desc.getText().toString(), type.getText().toString(), Integer.parseInt(weight.getText().toString()), OrderListActivity.this);
+                startActivityForResult(intent, REQUEST_EXIT);
             }
         });
     }
