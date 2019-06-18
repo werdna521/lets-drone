@@ -15,7 +15,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".InfoActivity"></activity>
+        <activity android:name=".PoinActivity"></activity>
+        <activity android:name=".WebActivity" />
+        <activity android:name=".InfoActivity" />
         <activity android:name=".ConfirmActivity" />
         <activity android:name=".TrackingActivity" />
         <activity android:name=".OrderListActivity" />

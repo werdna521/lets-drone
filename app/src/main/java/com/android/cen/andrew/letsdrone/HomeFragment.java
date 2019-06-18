@@ -17,6 +17,9 @@ public class HomeFragment extends Fragment {
     private MaterialCardView mOrder;
     private MaterialCardView mTracking;
     private MaterialCardView mInfo;
+    private MaterialCardView mPoin;
+    private MaterialCardView mFirst;
+    private MaterialCardView mSecond;
     private Callbacks mCallbacks;
 
     public interface Callbacks {
@@ -61,6 +64,36 @@ public class HomeFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 mCallbacks.start(InfoActivity.class);
+            }
+        });
+
+        mFirst = view.findViewById(R.id.first);
+        mFirst.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = WebActivity.newIntent("https://www.foldertekno.com/drone-terbaik/",
+                        "10 Drone Terbaik",
+                        getContext());
+                startActivity(intent);
+            }
+        });
+
+        mSecond = view.findViewById(R.id.second);
+        mSecond.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = WebActivity.newIntent("https://dailysocial.id/post/kejutan-polaroid-luncurkan-beragam-jenis-drone-baru/",
+                        "Drone Baru Polaroid",
+                        getContext());
+                startActivity(intent);
+            }
+        });
+
+        mPoin = view.findViewById(R.id.poin);
+        mPoin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mCallbacks.start(PoinActivity.class);
             }
         });
 
