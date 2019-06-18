@@ -99,34 +99,6 @@ public class TrackingActivity extends AppCompatActivity {
         bookingcode = findViewById(R.id.booking_num);
         track = findViewById(R.id.track);
 
-        if (okk) {
-            bookingcode.setText("TESTCODE");
-            map.setCenter(new GeoCoordinate( -6.1994, 106.781625),
-                    Map.Animation.NONE);
-            map.setZoomLevel(17);
-            Image from = new Image();
-            Image to = new Image();
-            Image drone = new Image();
-            try {
-                from.setImageResource(R.drawable.marker_from1);
-                to.setImageResource(R.drawable.marker_to1);
-                drone.setImageResource(R.drawable.drone_small);
-
-                MapMarker fromMarker =
-                        new MapMarker(new GeoCoordinate(-6.201935, 106.781525), from);
-                MapMarker toMarker =
-                        new MapMarker(new GeoCoordinate(-6.1914, 106.7817), to);
-                MapMarker droneMarker =
-                        new MapMarker(new GeoCoordinate(-6.1994, 106.781625), drone);
-
-                map.addMapObject(fromMarker);
-                map.addMapObject(toMarker);
-                map.addMapObject(droneMarker);
-            } catch (Exception e) {
-                Log.d("okokok", e.getMessage());
-            }
-        }
-
         track.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -156,7 +128,7 @@ public class TrackingActivity extends AppCompatActivity {
                         Log.d("okokok", e.getMessage());
                     }
                 } else {
-                    
+
                 }
             }
         });
@@ -178,6 +150,34 @@ public class TrackingActivity extends AppCompatActivity {
                 }
             }
         });
+
+        if (okk) {
+            bookingcode.setText("TESTCODE");
+            map.setCenter(new GeoCoordinate( -6.1994, 106.781625),
+                    Map.Animation.NONE);
+            map.setZoomLevel(17);
+            Image from = new Image();
+            Image to = new Image();
+            Image drone = new Image();
+            try {
+                from.setImageResource(R.drawable.marker_from1);
+                to.setImageResource(R.drawable.marker_to1);
+                drone.setImageResource(R.drawable.drone_small);
+
+                MapMarker fromMarker =
+                        new MapMarker(new GeoCoordinate(-6.201935, 106.781525), from);
+                MapMarker toMarker =
+                        new MapMarker(new GeoCoordinate(-6.1914, 106.7817), to);
+                MapMarker droneMarker =
+                        new MapMarker(new GeoCoordinate(-6.1994, 106.781625), drone);
+
+                map.addMapObject(fromMarker);
+                map.addMapObject(toMarker);
+                map.addMapObject(droneMarker);
+            } catch (Exception e) {
+                Log.d("okokok", e.getMessage());
+            }
+        }
     }
 
     private void checkPermissions() {

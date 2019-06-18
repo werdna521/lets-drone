@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity implements ProfileFragment.C
         super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == REQUEST) {
             if (resultCode == RESULT_OK) {
-                Intent intent = new Intent(this, TrackingActivity.class);
+                Intent intent = TrackingActivity.newIntent(true, this);
                 startActivity(intent);
             }
         }
