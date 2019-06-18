@@ -15,7 +15,7 @@
         android:layout_height="?attr/actionBarSize"
         android:background="@android:color/white"
         app:titleTextAppearance="@style/TextAppearance.MaterialComponents.Headline5"
-        android:text="D-Poin: 287"/>
+        app:title="D-Poin: 287"/>
     </com.google.android.material.appbar.AppBarLayout>
 
     <androidx.core.widget.NestedScrollView
@@ -24,6 +24,7 @@
         app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
 
         <LinearLayout
+            android:layout_marginTop="16dp"
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
