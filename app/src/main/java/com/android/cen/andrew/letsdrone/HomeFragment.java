@@ -16,6 +16,7 @@ import com.google.android.material.card.MaterialCardView;
 public class HomeFragment extends Fragment {
     private MaterialCardView mOrder;
     private MaterialCardView mTracking;
+    private MaterialCardView mInfo;
     private Callbacks mCallbacks;
 
     public interface Callbacks {
@@ -52,6 +53,14 @@ public class HomeFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 mCallbacks.start(TrackingActivity.class);
+            }
+        });
+
+        mInfo = view.findViewById(R.id.info);
+        mInfo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mCallbacks.start(InfoActivity.class);
             }
         });
 

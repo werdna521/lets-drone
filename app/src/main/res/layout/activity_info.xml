@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".InfoActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar_info"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@android:color/white"
+            app:titleTextAppearance="@style/TextAppearance.MaterialComponents.Headline5"
+            app:title="Info"/>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_margin="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardElevation="4dp">
+
+                <TextView
+                    android:padding="8dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="•Sistem kerja let's drone\nBagaimanakah sistem kerja let's drone milik kami?\n\nUser melakukan order pada aplikasi -> melakukan pembayaran -> pembayaran di konfirmasi -> drone mengambil barang di titik keberangkatan -> user mendapat receipt -> barang diantar sesuai tujuan -> sampai di tujuan -> notifikasi barang sampai -> konfirmasi barang telah diterima -> selesai"/>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_margin="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardElevation="4dp">
+
+                <TextView
+                    android:padding="8dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="•Ketentuan pengisian alamat\n\nAgar barang dapat cepat sampai dan tepat sampai di tujuan haruslah menggunakan alamat tujuan yang lengkap dan jelas, berikut adalah contoh penulisan alamat yang benar: \n\nJl. Anggrek No 78, Kampung Baru, RT/RW: 18/02, Cijantung, Pasar Rebo, Jakarta Timur, Kode Pos: 13770"/>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_margin="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardElevation="4dp">
+
+                <TextView
+                    android:padding="8dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="•Panduan Top Up\nBagaimana cara top up saldo let's drone? Berikut kami tampilkan langkah-langkah untuk melakukan pengisian saldo:\n-Top Up via ATM\n1. Masukan kartu\n2. Masukan pin\n3. Pilih menu transfer\n4. Pilih transfer ke virtual account\n5. Masukan 36396 sebagai 5 digit pertama dan lanjutan dengan nomor Handphone anda. Contoh : 3939608121xxxxx\n6. Masukan nominal yg diinginkan\n7. Tekan 'Ya'\n8. Transaksi berhasil\n\n-Top up via M-banking\n1. Masuk ke M-banking kalian\n2. Pilih menu transfer\n3. Pilih transfer ke virtual account\n4. Masukan 36396 sebagai 5 digit pertama dan lanjutan dengan nomor Handphone anda. Contoh : 3939608121xxxxx\n5. Masukan nominal yg diinginkan\n6. Tekan 'Ya'\n7. Masukan pin\n8. Transaksi berhasil"/>
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
