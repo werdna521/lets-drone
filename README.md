@@ -8,4 +8,4 @@ App supports:
   <li>Login / Register</li>
 </ul>
 
-<i>Download latest app from release</i>
+<i>Download latest version (alpha-2.0) from release</i>
