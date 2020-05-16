@@ -1,11 +1,9 @@
-# LetsDrone
+# Let's Drone
 
-A prototype delivery service app via drone.
-App supports:
-<ul>
-  <li>Real world map</li>
-  <li>News Feed</li>
-  <li>Login / Register</li>
-</ul>
+Let's Drone is a drone-service hailing application prototype, inspired by some famous ride-hailing applications, that runs on android devices. Let's Drone mainly focuses on freight forwarding services via drones. Written with native Java code, this application promises great in-app experience as well as simplicity when using the app.
 
-<i>Download latest version (alpha-2.0) from release</i>
+Every API used in the development of this application is open-sourced and free. Here is the list of external APIs used in this application:
+- HERE Maps (free tier)
+- [Google Material Design](https://material.io/) for Android
+
+## License
